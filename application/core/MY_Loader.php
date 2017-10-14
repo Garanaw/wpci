@@ -8,8 +8,7 @@ class WPCI_Loader extends CI_Loader {
 	/**
 	 * Show Errors
 	 *
-	 * Defines if errors should be displayed when 
-	 * loading a file fails or just return False
+	 * @return boolean
 	 */
 	private $show_errors;
 
@@ -34,6 +33,15 @@ class WPCI_Loader extends CI_Loader {
 
 	}
 
+	/**
+	 * Show Errors
+	 *
+	 * Defines if errors should be displayed when 
+	 * loading a file fails or just return False
+	 *
+	 * @param	boolean	$show_errors	If set, defines wether errors should be displayed or not
+	 * @return	boolean 
+	 */
 	public function show_errors($show_errors = NULL){
 		if (NULL !== $show_errors) {
 			$this->show_errors = $show_errors;
