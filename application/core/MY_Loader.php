@@ -48,6 +48,28 @@ class WPCI_Loader extends CI_Loader {
 		}
 		return (ENVIRONMENT === 'development') && $this->show_errors;
 	}
+
+	/**
+
+	 * List of loaded helpers
+	 *
+	 * @return array
+	 */
+	public function get_helpers(){ return $this->_ci_helpers; }
+
+	/**
+	 * List of loaded views
+	 *
+	 * @return array
+	 */
+	public function get_views(){ return $this->_ci_views; }
+
+	/**
+	 * List of loaded models
+	 *
+	 * @return array
+	 */
+	public function get_models(){ return $this->_ci_models; }
 }
 
 
